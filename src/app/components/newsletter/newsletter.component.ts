@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { User } from 'src/app/models/user';
 import { ProductService } from 'src/app/services/product.service';
@@ -6,7 +6,8 @@ import { ProductService } from 'src/app/services/product.service';
 @Component({
   selector: 'newsletter',
   templateUrl: './newsletter.component.html',
-  styleUrls: ['./newsletter.component.css']
+  styleUrls: ['./newsletter.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class NewsletterComponent implements OnInit {
 
@@ -26,8 +27,6 @@ export class NewsletterComponent implements OnInit {
   onSubmit() {
     this.userInfo.name = this.profileForm?.value["name"];
     this.userInfo.email = this.profileForm?.value["userEmail"];
-    // console.log(this.profileForm.value);
-    // console.log(this.userInfo);}
     this._service.subscribeToNewsLetter(this.userInfo)
     .subscribe(res => {
       console.table(res);

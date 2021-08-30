@@ -1,7 +1,26 @@
-<div>
-    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
-        <input id="name" placeholder="Ingresa tu nombre" type="text" pInputText formControlName="name">
-        <input id="userEmail" placeholder="Ingresa tu mail" type="text" pInputText formControlName="userEmail">
-        <button pButton type="submit" [disabled]="!profileForm.valid">Subscribirme</button>
-    </form>
+<div class="grid-container">
+  <h2>¡Únete a nuestras novedades y promociones</h2>
+  <form
+    class="flex-container"
+    [formGroup]="profileForm"
+    (ngSubmit)="onSubmit()"
+  >
+    <input
+      id="name"
+      placeholder="Ingresa tu nombre"
+      type="text"
+      pInputText
+      formControlName="name"
+    />
+    <input
+      id="userEmail"
+      placeholder="Ingresa tu mail"
+      type="text"
+      pInputText
+      formControlName="userEmail"
+    />
+    <button class="btn-subscribe" pButton type="submit" [disabled]="!profileForm.valid">
+      Subscribirme
+    </button>
+  </form>
 </div>

@@ -1,0 +1,24 @@
+.red {
+    color: red;
+}
+
+#more-sold {
+    text-align: center;
+    color: #000000;
+}
+
+#car-content button {
+    background-color: #000000!important;
+}
+
+#car-content:hover {
+    background-color: rgb(224, 224, 224);
+    border-radius: 5px;
+}
+
+.price{
+    color: #000000;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+}

@@ -9,7 +9,8 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NewsletterComponent } from './components/newsletter/newsletter.component';
 import { SlideProductsComponent } from './components/slide-products/slide-products.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { GalleryComponent } from './components/gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -18,8 +19,16 @@ import { ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     NewsletterComponent,
     SlideProductsComponent,
+    GalleryComponent,
   ],
-  imports: [BrowserModule, HttpClientModule, AngularMaterialModule, BrowserAnimationsModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule, 
+    HttpClientModule, 
+    AngularMaterialModule, 
+    BrowserAnimationsModule, 
+    ReactiveFormsModule,
+    FormsModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
